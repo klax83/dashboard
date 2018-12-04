@@ -16,45 +16,56 @@
 
 <body class="bg-info">
 
-	<div class="container py-5">
-
-		<div class="row">
-		
-			<div id="user" class="user">
-		
-				<img src="">
-				<h1></h1>
-				<h5 id="userid"></h5>
-			</div>
-		
-			<div id="status" class="status">
-				<h5 id="timeanddate"></h5>
-				<h1>My Progress</h1>
-				<div id="statusbar"></div>
-				<p>RESUME</p>				
-			</div>
-		
-			<div id="subject" class="subject">
-				<p>COURSES</p>
-				<p>ACTIVITY</p>
-				<p>ACCOUNT</p>				
-			</div>			
-		
-			<div id="info" class="info">
-				<h1>My Courses:</h1>
-				<ul>
-					<li></li>
-					<p></p>
-					<li></li>
-					<p></p>
-					<li></li>
-					<p></p>
-				</ul>
-				
-			</div>
-		</div>
-		
+	<div class="nav">
+		<li onclick="expand()"><i class="fas fa-bars"></i></li>	
+		<li><i class="fas fa-home"></i><span class="hidden" >Home</span></li>
+		<li><i class='fas fa-sign-out-alt'></i><span class="hidden">Log Out</span></li>
 	</div>
+
+
+	<main class="container py-5">
+		
+		<div class="left">
+
+			<div id="user" class="user">
+				
+				<img class="mx-auto my-3 img" src="">
+				<h1></h1>
+				<h5></h5>
+			</div>
+
+			<div id="subject" class="subject">
+				<a onclick="showCourse()" href="#">COURSES</a>
+				<a onclick="showActivity()" href="#">ACTIVITY</a>
+				<a onclick="showAccount()" href="#">ACCOUNT</a>				
+			</div>
+
+		</div>	
+		
+		<div class="right">	
+
+			<div id="status" class="status">
+
+				<span id="timeanddate"></span>
+				<h1>My Progress</h1>
+
+				<div id="statusbar" class="mx-auto">
+					<div id="color">
+						<p id="progress"></p>
+					</div>
+				</div>
+				<button type="button" class=" my-2 btn btn-info">Info</button>				
+			</div>
+					
+			<div id="infoDiv" class="info">
+				<h1></h1>
+				<ul id="info">
+				</ul>
+			
+			</div>
+		</div>	
+		
+	</main>
 	
 	
 	<!-- SCRIPTS -->
